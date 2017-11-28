@@ -1,0 +1,10 @@
+git clone url
+
+//depois de modificar
+
+git status
+git add -A 
+git commit -m "a mensagem"
+git push
+
+
