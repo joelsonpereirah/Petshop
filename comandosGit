@@ -5,6 +5,9 @@ git clone url
 git status
 git add -A 
 git commit -m "a mensagem"
+//git pull
 git push
+
+
 
 
