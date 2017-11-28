@@ -9,7 +9,7 @@
 using namespace std;
 
 void menu1(){
-	std::cout<<"Seja Bem Vindo - PETSHOP!!"<<std::endl;
+	std::cout<<"PSeja Bem Vindo - PETSHOP!!"<<std::endl;
 
   	std::cout<<"-------MENU---------"<<std::endl;
 
