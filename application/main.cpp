@@ -1,12 +1,14 @@
 #include <iostream>
 #include <string>
 #include "../include/Petshop.h"
-
+#include"../include/menu.h"
 
 
 using namespace std;
 
-void menu1(){
+int main()
+{
+	int choice = 1;
 	std::cout<<"PSeja Bem Vindo - PETSHOP!!"<<std::endl;
 
   	std::cout<<"-------MENU---------"<<std::endl;
@@ -27,14 +29,35 @@ void menu1(){
   	std::cout<<"[9] Listar Veterinario"<<std::endl; 
 
   	std::cout << "[0] Saída" << std::endl;
-}
 
-int main()
-{
-	Petshop a;
-	a.read("abacaxi");
+	std::cin >> choice;
 
-	std::cout << "Hello bro" <<std::endl;
+	Petshop pet;
+
+	switch(choice)
+	{
+		case 1:
+			pet.clientes.push_back(cadastro_cliente());
+			pet.write();
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		case 7:
+			break;
+		case 8:
+			break;
+		case 9:
+			break;
+		case 0:
+			break;
+	}
 	return 0;
-
 }

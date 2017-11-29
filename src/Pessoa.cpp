@@ -26,7 +26,7 @@ Pessoa::~Pessoa(){
 
 
 ///////////////////////////////////GET's e SET's --- PESSSOA////////////////////////////////
-string Pessoa::getNome(){
+string Pessoa::getNome() const{
     return nome;
 }
 
@@ -35,7 +35,7 @@ void Pessoa::setNome(string m_nome){
 }
 
 
-string Pessoa::getCpf(){
+string Pessoa::getCpf() const{
     return cpf;
 }
 
@@ -44,7 +44,7 @@ void Pessoa::setCpf(string m_cpf){
 }
 
 
-string Pessoa::getEndereco(){
+string Pessoa::getEndereco() const{
     return endereco;
 }
 
@@ -53,7 +53,7 @@ void Pessoa::setEndereco(string m_endereco){
 }
 
 
-string Pessoa::getTelefone(){
+string Pessoa::getTelefone() const{
     return telefone;
 }
 
@@ -84,7 +84,7 @@ Funcionario::~Funcionario(){
 
 /////////GET's e SET's------FUNCIONARIOS////////////q
 
-string Funcionario::getFuncao(){
+string Funcionario::getFuncao() const{
     return funcao;
 }
 
@@ -93,7 +93,7 @@ void Funcionario::setFuncao(string m_funcao){
 }
 
 
-string Funcionario::getAdmissao(){
+string Funcionario::getAdmissao() const{
     return admissao;
 }
 
@@ -126,7 +126,7 @@ Veterinario::~Veterinario(){
 }
 ////////////SET's e GET's ---- VETERINARIO/////////////
 
-string Veterinario::getEspecializacao(){
+string Veterinario::getEspecializacao() const{
     return especializacao;
 }
 
@@ -135,7 +135,7 @@ void Veterinario::setEspecializacao(string m_espcializacao){
 }
 
 
-string Veterinario::getCrmv(){
+string Veterinario::getCrmv() const{
     return crmv;
 }
 
@@ -164,16 +164,19 @@ Cliente::~Cliente(){
 }
 
 //Sets & Gets
-void Cliente::set_animais(vector<Animal> &animais_ext){
+void Cliente::setAnimais(vector<Animal> &animais_ext){
 	animais = animais_ext;
 }       
   
-vector<Animal> Cliente::get_animais(){
+vector<Animal> Cliente::getAnimais() const{
     return animais;
 }  
 
+Cliente Cliente::operator= (const Cliente &obj){
+    animais = obj.getAnimais();
 
-
+    return *this;
+}
 
 
 

@@ -19,7 +19,7 @@ APPOBJ = $(patsubst $(APPDIR)/%.cpp,$(OBJDIR)/%.o,$(APP))
 #TESTS = $(patsubst %.cpp,%,$(_TESTS))
 
 $(BIN): $(OBJS) $(APPOBJ)
-	$(CC) -o $(BIN) $(APPOBJ) $(OBJS) $(CFLAGS) $(LDFLAGS)
+	$(CC) -g -o $(BIN) $(APPOBJ) $(OBJS) $(CFLAGS) $(LDFLAGS)
 
 $(APPOBJ): $(APP)
 	$(CC) -c -o $@ $< $(CFLAGS)

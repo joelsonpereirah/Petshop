@@ -9,32 +9,30 @@ class Animal
 
 public:
 	string nome;
-	int id;
 	string nascimento;
 	string especie;
 	string raca;
 
 public:
 	Animal();
-	Animal(string m_nome, int m_id, string m_nascimento, string m_especie, string m_raca);
+	Animal(string m_nome, string m_nascimento, string m_especie, string m_raca);
 	~Animal();
 
-	void setNome(string);
-	string getNome();
+	Animal operator= ( const Animal &other);
 
-	void setId(int);
-	int getId();
+	void setNome(string);
+	string getNome() const;
 
 	void setNascimento(string);
-	string getNascimento();
+	string getNascimento() const;
 
 
 	void setEspecie(string);
-	string getEspecie();
+	string getEspecie() const;
 
 
 	void setRaca(string);
-	string getRaca();
+	string getRaca() const;
 
 };
 

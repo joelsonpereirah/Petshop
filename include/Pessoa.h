@@ -25,20 +25,20 @@ public:
 
 	//sets & gets
 	void setNome(string);
-	string getNome();
+	string getNome() const;
 
 
 	void setCpf(string);
-	string getCpf();
+	string getCpf() const;
 
 
 	void setEndereco(string);
-	string getEndereco();
+	string getEndereco() const;
 
 
 	void setTelefone(string);
-	string getTelefone();
-	
+	string getTelefone() const;
+
 };
 
 class Funcionario: public Pessoa
@@ -55,11 +55,11 @@ public:
 
 	//sets & gets
 	void setFuncao(string);
-	string getFuncao();
+	string getFuncao() const;
 
 
 	void setAdmissao(string);
-	string getAdmissao();
+	string getAdmissao() const;
 };
 
 
@@ -80,11 +80,11 @@ public:
 
 	//sets & gets
 	void setEspecializacao(string);
-	string getEspecializacao();
+	string getEspecializacao() const;
 
 
 	void setCrmv(string);
-	string getCrmv();
+	string getCrmv() const;
 };
 
 
@@ -99,9 +99,11 @@ public:
 	Cliente(string m_nome, string m_cpf, string m_endereco, string m_telefone, vector<Animal> m_animal);
 	~Cliente();
 
+	Cliente operator= ( const Cliente &other);
 	//sets & gets
-	void set_animais(vector<Animal> &animais_ext);
-	vector<Animal> get_animais();
+	void setAnimais(vector<Animal> &animais_ext);
+	vector<Animal> getAnimais() const;
+
 };
 
 
