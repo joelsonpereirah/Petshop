@@ -37,7 +37,7 @@ int main()
 
 	Petshop petshop;
 
-	petshop.read("clientes");
+	petshop.read();
 
 	Animal animal1("nome1", 1, "nascimento1", "especie1", "raca1");
 	Animal animal2("nome2", 2, "nascimento2", "especie2", "raca2");
@@ -59,7 +59,7 @@ int main()
 		system("clear");
 	}
 
-	petshop.write("clientes");
+	petshop.write();
 
 return 0;
 
