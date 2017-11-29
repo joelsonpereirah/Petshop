@@ -186,10 +186,9 @@ Cliente::Cliente(){
 
 }
 
-Cliente::Cliente(string m_nome, string m_cpf, string m_endereco, string m_telefone, Animal m_animal)
+Cliente::Cliente(string m_nome, string m_cpf, string m_endereco, string m_telefone, vector<Animal> m_animais)
 :Pessoa(m_nome, m_cpf, m_endereco, m_telefone){
-    
-    animais.push_back(m_animal);
+    animais = m_animais;
 }
 
 
@@ -221,8 +220,11 @@ int Cliente::addAnimal(Animal m_animal){
 //void Clente::listarAnimal(Cliente m_cliente){
   //  for()   
 //}
-        
-  
+
+vector<Animal> Cliente::getAnimais() {
+	return animais;
+}
+
 Cliente::~Cliente(){
 
 }

@@ -89,13 +89,13 @@ public:
 	vector<Animal> animais;
 public:
 	 Cliente();
-	 Cliente(string m_nome, string m_cpf, string m_endereco, string m_telefone, Animal m_animal);
+	 Cliente(string m_nome, string m_cpf, string m_endereco, string m_telefone, vector<Animal> m_animais);
 	 ~Cliente();
 
 	int addAnimal (Animal);
 	void listarAnimal(Cliente);
 	//void removeAnimal(Animal);
-	//vector<Animal> getAnimais();
+	vector<Animal> getAnimais();
 
 };
 

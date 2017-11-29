@@ -35,32 +35,31 @@ int main()
 {
 	int op=1;
 
+	Petshop petshop;
+
+	petshop.ler_dados("clientes");
+
+	Animal animal1("nome1", 1, "nascimento1", "especie1", "raca1");
+	Animal animal2("nome2", 2, "nascimento2", "especie2", "raca2");
+	Animal animal3("nome3", 3, "nascimento3", "especie3", "raca3");
+
+	vector<Animal> animais;
+
+	animais.push_back(animal1);
+	animais.push_back(animal2);
+	animais.push_back(animal3);
+
+	Cliente cliente("nome2", "12345678", "endereco2", "12345677", animais);
+	petshop.clientes.push_back(cliente);
+
 	while(op)
 	{
 		menu1();
 		cin>>op;
 		system("clear");
-
-
-
-
 	}
-	
 
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
+	petshop.salvar_dados("clientes");
 
 return 0;
 

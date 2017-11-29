@@ -28,6 +28,15 @@ public:
 	void mostrar_funcionarios();
 	void mostrar_clientes();
 
+	void ler_dados(string);
+	void salvar_dados(string);
+
+private:
+	void ler_clientes(istream &);
+	vector<Animal> ler_animais(istream &);
+
+	void salvar_clientes(ostream &);
+	void salvar_animais(ostream &, vector<Animal>);
 };
 
 #endif // PETSHOP_H_INCLUDED
