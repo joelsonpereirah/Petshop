@@ -40,7 +40,7 @@ void Petshop::mostrar_funcionarios(){
 
 /// Lê os dados do sistema armazenados durante a persistência.
 /// @param arquivo Nome do arquivo contendo os dados dos clientes
-void Petshop::ler_dados(string arquivo) {
+void Petshop::read(string arquivo) {
 	ifstream fp(arquivo);
 	ler_clientes(fp);
 	fp.close();
@@ -101,7 +101,7 @@ vector<Animal> Petshop::ler_animais(istream &in) {
 
 /// Persiste os dados da aplicação.
 /// @param arquivo Nome do arquivo contendo os dados dos clientes
-void Petshop::salvar_dados(string arquivo) {
+void Petshop::write(string arquivo) {
 	ofstream fp(arquivo);
 	salvar_clientes(fp);
 	fp.close();

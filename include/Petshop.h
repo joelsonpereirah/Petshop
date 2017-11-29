@@ -28,8 +28,8 @@ public:
 	void mostrar_funcionarios();
 	void mostrar_clientes();
 
-	void ler_dados(string);
-	void salvar_dados(string);
+	void read(string);
+	void write(string);
 
 private:
 	void ler_clientes(istream &);
