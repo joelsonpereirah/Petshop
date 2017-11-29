@@ -1,4 +1,4 @@
-Animal a;//teste
+Animal a;
   Animal b{"toto", 10, "27/04/2010", "cachorro", "vira-lata"};
   Animal d{"rex", 10311, "27/04/2010", "cachorro", "vira-lata"};
 

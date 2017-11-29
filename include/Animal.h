@@ -19,13 +19,8 @@ public:
 	Animal(string m_nome, int m_id, string m_nascimento, string m_especie, string m_raca);
 	~Animal();
 
-	bool operator == ( const Animal & ani) const  { return this->nome == ani.nome;}
-
-
-
 	void setNome(string);
 	string getNome();
-
 
 	void setId(int);
 	int getId();

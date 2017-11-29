@@ -1,9 +1,9 @@
-#include "Animal.h"
+#include "../include/Animal.h"
 #include <iostream>
 using namespace std;
 
 
-
+//Constructors & Destructors
 Animal::Animal(){
     nome = {};
 	id = {};
@@ -25,6 +25,8 @@ Animal::~Animal(){
 
 }
 
+
+//Sets & Gets
 void Animal::setNome(string m_nome){
 	nome = m_nome;
 }

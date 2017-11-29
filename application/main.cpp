@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Animal.h"
-#include "Pessoa.h"
-#include "Petshop.h"
+#include "../include/Petshop.h"
 
 
 
@@ -33,35 +31,10 @@ void menu1(){
 
 int main()
 {
-	int op=1;
+	Petshop a;
+	a.read("abacaxi");
 
-	while(op)
-	{
-		menu1();
-		cin>>op;
-		system("clear");
-
-
-
-
-	}
-	
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-return 0;
+	std::cout << "Hello bro" <<std::endl;
+	return 0;
 
 }

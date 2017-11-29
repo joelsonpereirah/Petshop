@@ -3,7 +3,8 @@
 
 #include "Animal.h"
 #include "Pessoa.h"
-
+#include <fstream>
+#include <string>
 
 class Petshop
 {
@@ -13,20 +14,11 @@ public:
 	std::vector<Funcionario> funcionarios;
 	std::vector<Veterinario> veterionarios;
     int id;
-    string endereco;
-    string cnpj;
+    std::string endereco;
+    std::string cnpj;
 
-
-
-public:
-    Petshop();
-	~Petshop();
-
-	//cadastrar funcionário
-	void cadastrar_clientes(Cliente m_cliente);
-	void cadastrar_funcionarios(Funcionario m_funcionario);
-	void mostrar_funcionarios();
-	void mostrar_clientes();
+	void read(std::string file);
+	void write(std::string file);
 
 };
 

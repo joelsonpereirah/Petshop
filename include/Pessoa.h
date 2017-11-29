@@ -18,10 +18,12 @@ protected:
 	string endereco;
 	string telefone;
 public:
+	//constructors & destructors
 	Pessoa();
 	Pessoa(string m_nome, string m_cpf, string m_endereco, string m_telefone);
 	~Pessoa();
 
+	//sets & gets
 	void setNome(string);
 	string getNome();
 
@@ -36,6 +38,7 @@ public:
 
 	void setTelefone(string);
 	string getTelefone();
+	
 };
 
 class Funcionario: public Pessoa
@@ -45,10 +48,12 @@ protected:
 	string admissao;
 
 public:
+	//constructors & destructors
 	Funcionario();
 	Funcionario(string m_nome, string m_cpf, string m_endereco, string m_telefone, string m_funcao, string m_admissao);
 	~Funcionario();
 
+	//sets & gets
 	void setFuncao(string);
 	string getFuncao();
 
@@ -66,13 +71,14 @@ private:
 	string especializacao;
 	string crmv;
 public:
-	//Veterinario();
+	//constructors & destructors
 	Veterinario();
 	Veterinario(string m_nome, string m_cpf, string m_endereco, string m_telefone, string m_funcao, string m_admissao, string m_espcializacao,
     		 string m_crmv);
                
    ~Veterinario();
 
+	//sets & gets
 	void setEspecializacao(string);
 	string getEspecializacao();
 
@@ -88,15 +94,14 @@ class Cliente : public Pessoa
 public:
 	vector<Animal> animais;
 public:
-	 Cliente();
-	 Cliente(string m_nome, string m_cpf, string m_endereco, string m_telefone, Animal m_animal);
-	 ~Cliente();
+	//constructors & destructors
+	Cliente();
+	Cliente(string m_nome, string m_cpf, string m_endereco, string m_telefone, vector<Animal> m_animal);
+	~Cliente();
 
-	int addAnimal (Animal);
-	void listarAnimal(Cliente);
-	//void removeAnimal(Animal);
-	//vector<Animal> getAnimais();
-
+	//sets & gets
+	void set_animais(vector<Animal> &animais_ext);
+	vector<Animal> get_animais();
 };
 
 
