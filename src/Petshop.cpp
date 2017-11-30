@@ -246,3 +246,33 @@ void Petshop::editar_veterinario() {
 
 	std::cout << "Cliente não encontrado!" << std::endl;
 }
+
+void Petshop::listar_clientes(){
+	cout<<"+++++++++++CLIENTES CADASTRADOS+++++++++++++"<<endl;
+	for (auto cliente : clientes) {
+		int i = 1;
+		cout <<"["<<i<<"] "<<"NOME: " <<cliente.getNome() << '|'<<"CPF: " << cliente.getCpf() << '|'
+				<<"ENDERECO: "<< cliente.getEndereco() << '|'<< "TELEFONE: "<< cliente.getTelefone() << std::endl;
+				cout<<"----SEUS ANIMAIS CADASTRADOS:----"<<endl;
+				listar_animais(cliente.getAnimais());
+				i++;
+			
+	}
+}
+
+void Petshop::listar_animais(vector<Animal> animais){
+	
+		for(auto animal:animais){
+			int i = 1;
+			cout <<"["<<i<<"] "<<"NOME: "<<animal.getNome() << '|'<<"NASCIMENTO: " << animal.getNascimento() << '|'<<"ESPECIE: "
+				<< animal.getEspecie() << '|'<<"RACA: " << animal.getRaca() << std::endl;
+				i++;
+		}
+	
+	
+}
+
+
+   
+
+

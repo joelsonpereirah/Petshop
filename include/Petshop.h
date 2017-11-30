@@ -34,6 +34,9 @@ public:
     void salvar_funcionarios(ostream &);
 	void salvar_veterinarios(ostream &);
 
+	void listar_clientes();
+	void listar_animais(vector<Animal>);
+
 	void editar_cliente();
 	void editar_funcionario();
 	void editar_veterinario();
