@@ -20,4 +20,4 @@ Veterinario editar_veterinario(Veterinario &veterinario);
 void listar_clientes(std::vector<Cliente> &clienteData);
 void listar_animais(std::vector<Animal> &animalData);
 void listar_funcionarios(std::vector<Funcionario> &funcionarioData);
-void listar_veterinario(std::vector<Veterinario> &veterinarioData);
+void listar_veterinarios(std::vector<Veterinario> &veterinarioData);
