@@ -31,16 +31,3 @@ Animal a;
   pet.mostrar_clientes();
 
   cout<<pet.clientes[0].addAnimal(d)<<endl;
-
-
-
-	cout<<"entrei aqui"<<endl;
-	int j = clientes.size();
-
-	cout<<j;
-	for( unsigned int i = 0; i<clientes.size(); i++){
-		
-		cout << clientes[i].getNome() << '|' << clientes[i].getCpf() << '|'
-				<< clientes[i].getEndereco() << '|' << clientes[i].getTelefone() << std::endl;
-	}
-

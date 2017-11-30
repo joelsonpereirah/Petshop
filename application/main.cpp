@@ -8,11 +8,6 @@ using namespace std;
 
 int main()
 {
-
-
-	Petshop pet;
-	pet.read();
-
 	int choice = 1;
 	std::cout<<"PSeja Bem Vindo - PETSHOP!!"<<std::endl;
 
@@ -37,7 +32,8 @@ int main()
 
 	std::cin >> choice;
 
-	
+	Petshop pet;
+
 	switch(choice)
 	{
 		case 1:
@@ -45,8 +41,12 @@ int main()
 			pet.write();
 			break;
 		case 2:
+			pet.funcionarios.push_back(cadastro_funcionario());
+			pet.write();
 			break;
 		case 3:
+      pet.veterinarios.push_back(cadastro_veterinario());
+			pet.write();
 			break;
 		case 4:
       pet.editar_cliente();
@@ -61,7 +61,6 @@ int main()
 			pet.write();
 			break;
 		case 7:
-			pet.listar_clientes();
 			break;
 		case 8:
 			break;

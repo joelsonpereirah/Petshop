@@ -41,20 +41,26 @@ string Pessoa::getCpf() const{
     return cpf;
 }
 
+/// Define o valor do CPF de Pessoa
+/// @param m_cpf CPF a ser definido
 void Pessoa::setCpf(string m_cpf){
     cpf = m_cpf;
 }
 
 
+/// Obtém o endereço de Pessoa 
 string Pessoa::getEndereco() const{
     return endereco;
 }
 
+/// Define o valor do endereço de Pessoa
+/// @param m_cpf endereco a ser definido
 void Pessoa::setEndereco(string m_endereco){
     endereco = m_endereco;
 }
 
 
+/// Obtém o endereço de Pessoa 
 string Pessoa::getTelefone() const{
     return telefone;
 }
@@ -111,6 +117,7 @@ Funcionario::~Funcionario(){
 
 /////////GET's e SET's------FUNCIONARIOS////////////q
 
+/// Obtém o endereço de Pessoa 
 string Funcionario::getFuncao() const{
     return funcao;
 }
@@ -120,6 +127,7 @@ void Funcionario::setFuncao(string m_funcao){
 }
 
 
+/// Obtém o endereço de Pessoa 
 string Funcionario::getAdmissao() const{
     return admissao;
 }
@@ -171,6 +179,7 @@ Veterinario::~Veterinario(){
 }
 ////////////SET's e GET's ---- VETERINARIO/////////////
 
+/// Obtém o endereço de Pessoa 
 string Veterinario::getEspecializacao() const{
     return especializacao;
 }
@@ -180,6 +189,7 @@ void Veterinario::setEspecializacao(string m_espcializacao){
 }
 
 
+/// Obtém o endereço de Pessoa 
 string Veterinario::getCrmv() const{
     return crmv;
 }

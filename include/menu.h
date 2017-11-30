@@ -7,3 +7,5 @@
 
 Cliente cadastro_cliente();
 Animal cadastro_animal();
+Funcionario cadastro_funcionario();
+Veterinario cadastro_veterinario();
