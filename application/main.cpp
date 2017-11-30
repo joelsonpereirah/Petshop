@@ -41,8 +41,12 @@ int main()
 			pet.write();
 			break;
 		case 2:
+			pet.funcionarios.push_back(cadastro_funcionario());
+			pet.write();
 			break;
 		case 3:
+      pet.veterinarios.push_back(cadastro_veterinario());
+			pet.write();
 			break;
 		case 4:
 			break;
