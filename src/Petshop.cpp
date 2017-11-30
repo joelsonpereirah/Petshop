@@ -55,7 +55,7 @@ void Petshop::ler_clientes(istream &in) {
 		getline(ss, endereco, '|');
 		getline(ss, telefone);
 
-		ifstream fp(cpf);
+		ifstream fp("save/" + cpf);
 		vector<Animal> animais = ler_animais(fp);
 		fp.close();
 
@@ -73,7 +73,7 @@ void Petshop::salvar_clientes(ostream &out) {
 		out << cliente.getNome() << '|' << cliente.getCpf() << '|'
 				<< cliente.getEndereco() << '|' << cliente.getTelefone() << std::endl;
 
-		ofstream fp(cliente.getCpf());
+		ofstream fp("save/" + cliente.getCpf());
 		salvar_animais(fp, cliente.getAnimais());
 		fp.close();
 	}

@@ -17,12 +17,12 @@ public:
     std::string endereco;
     std::string cnpj;
 
-	void read(string arquivo_clientes = "clientes",
-						string arquivo_funcionarios = "funcionarios",
-						string arquivo_veterinarios = "veterinarios");
-	void write(string arquivo_clientes = "clientes",
-						string arquivo_funcionarios = "funcionarios",
-						string arquivo_veterinarios = "veterinarios");
+	void read(string arquivo_clientes = "save/clientes.txt",
+						string arquivo_funcionarios = "save/funcionarios.txt",
+						string arquivo_veterinarios = "save/veterinarios.txt");
+	void write(string arquivo_clientes = "save/clientes.txt",
+						string arquivo_funcionarios = "save/funcionarios.txt",
+						string arquivo_veterinarios = "save/veterinarios.txt");
 
     void ler_clientes(istream &);
 	vector<Animal> ler_animais(istream &);

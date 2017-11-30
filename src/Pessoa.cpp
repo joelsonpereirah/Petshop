@@ -101,6 +101,16 @@ void Funcionario::setAdmissao(string m_admissao){
     admissao = m_admissao;
 }
 
+Funcionario Funcionario::operator= ( const Funcionario &other){
+    funcao = other.getFuncao();
+	admissao = other.getAdmissao();
+    nome = other.getNome();
+	cpf = other.getCpf();
+	endereco = other.getEndereco();
+	telefone = other.getTelefone();
+
+    return *this;
+}
 
 
 /////////////Construtores e Destrutores -- FUNCIONARIO //////
@@ -143,6 +153,18 @@ void Veterinario::setCrmv(string m_crmv){
     crmv = m_crmv;
 }
 
+Veterinario Veterinario::operator= ( const Veterinario &other){
+    especializacao = other.getEspecializacao();
+    crmv = other.getCrmv();
+    funcao = other.getFuncao();
+	admissao = other.getAdmissao();
+    nome = other.getNome();
+	cpf = other.getCpf();
+	endereco = other.getEndereco();
+	telefone = other.getTelefone();
+
+    return *this;
+}
 
 
 //Constructors & Destructors
@@ -174,7 +196,10 @@ vector<Animal> Cliente::getAnimais() const{
 
 Cliente Cliente::operator= (const Cliente &obj){
     animais = obj.getAnimais();
-
+    nome = obj.getNome();
+	cpf = obj.getCpf();
+	endereco = obj.getEndereco();
+	telefone = obj.getTelefone();
     return *this;
 }
 

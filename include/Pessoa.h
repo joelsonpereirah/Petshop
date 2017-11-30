@@ -53,6 +53,8 @@ public:
 	Funcionario(string m_nome, string m_cpf, string m_endereco, string m_telefone, string m_funcao, string m_admissao);
 	~Funcionario();
 
+	Funcionario operator= ( const Funcionario &other);
+
 	//sets & gets
 	void setFuncao(string);
 	string getFuncao() const;
@@ -74,10 +76,11 @@ public:
 	//constructors & destructors
 	Veterinario();
 	Veterinario(string m_nome, string m_cpf, string m_endereco, string m_telefone, string m_funcao, string m_admissao, string m_espcializacao,
-    		 string m_crmv);
-               
+    		 string m_crmv);               
    ~Veterinario();
 
+
+	Veterinario operator= ( const Veterinario &other);
 	//sets & gets
 	void setEspecializacao(string);
 	string getEspecializacao() const;
@@ -103,7 +106,6 @@ public:
 	//sets & gets
 	void setAnimais(vector<Animal> &animais_ext);
 	vector<Animal> getAnimais() const;
-
 };
 
 

@@ -3,61 +3,79 @@
 #include "../include/Petshop.h"
 #include"../include/menu.h"
 
-
 using namespace std;
 
 int main()
 {
 	int choice = 1;
-	std::cout<<"PSeja Bem Vindo - PETSHOP!!"<<std::endl;
-
-  	std::cout<<"-------MENU---------"<<std::endl;
-
-  	std::cout<<"---CADASTROS---"<<std::endl;
-  	std::cout<<"[1] Cadastrar Clientes"<<std::endl;
-  	std::cout<<"[2] Cadastrar Funcionário"<<std::endl;
-  	std::cout<<"[3] Cadastrar Veterinario"<<std::endl;
-  
-  	std::cout<<"---EDITAR---"<<std::endl;
-  	std::cout<<"[4] Editar Cliente"<<std::endl;
-  	std::cout<<"[5] Editar Funcionario"<<std::endl; 
-  	std::cout<<"[6] Editar Veterinario"<<std::endl; 
-
-  	std::cout<<"---LISTAR---"<<std::endl;
-  	std::cout<<"[7] Listar Clientes"<<std::endl; 
-  	std::cout<<"[8] Listar Funcionarios"<<std::endl; 
-  	std::cout<<"[9] Listar Veterinario"<<std::endl; 
-
-  	std::cout << "[0] Saída" << std::endl;
-
-	std::cin >> choice;
-
 	Petshop pet;
+	//Fazer a leitura dos arquivos
 
-	switch(choice)
-	{
-		case 1:
-			pet.clientes.push_back(cadastro_cliente());
-			pet.write();
-			break;
-		case 2:
-			break;
-		case 3:
-			break;
-		case 4:
-			break;
-		case 5:
-			break;
-		case 6:
-			break;
-		case 7:
-			break;
-		case 8:
-			break;
-		case 9:
-			break;
-		case 0:
-			break;
+	uint editar_cliente_posicao;
+	while(choice){
+		choice = menu_principal();
+		system("clear");
+		switch(choice)
+		{
+			//Cadastrar Cliente
+			case 1:
+				pet.clientes.push_back(cadastro_cliente());
+				pet.write();
+				break;
+
+			//Cadastrar Funcionário
+			case 2:
+				break;
+
+			//Cadastrar Veterinário
+			case 3:
+				break;
+
+			//Editar Cliente
+			case 4:
+				listar_clientes(pet.clientes);
+
+				std::cout << "Digite o número associado ao cliente que se deseja editar: ";
+				std::cin >> editar_cliente_posicao;
+				if( editar_cliente_posicao < 1 || editar_cliente_posicao > pet.clientes.size())
+				{
+					std::cout << "Posição inválida" << std::endl;
+					break;
+				}
+				editar_cliente(pet.clientes[editar_cliente_posicao-1]);
+				break;
+
+			//Editar Funcionário
+			case 5:
+				break;
+
+			//Editar Veterinário
+			case 6:
+				break;
+
+			//Listar Clientes
+			case 7:
+				listar_clientes(pet.clientes);
+				break;
+			//Listar Funcionário
+			case 8:
+				break;
+			//Listar Veterinário
+			case 9:
+				break;
+			default:
+				choice = 0;
+				break;
+		}
+		std::cin.ignore(INT_MAX,'\n');
+		string wait_for_input;
+		std::cout << "Digite algo e pressione enter para voltar ao menu principal" << std::endl;
+		getline(cin, wait_for_input);
 	}
+	
+
+	
+
+	
 	return 0;
 }
