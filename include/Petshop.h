@@ -34,7 +34,9 @@ public:
     void salvar_funcionarios(ostream &);
 	void salvar_veterinarios(ostream &);
 
-
+	void editar_cliente();
+	void editar_funcionario();
+	void editar_veterinario();
 };
 
 #endif // PETSHOP_H_INCLUDED

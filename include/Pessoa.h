@@ -39,6 +39,7 @@ public:
 	void setTelefone(string);
 	string getTelefone() const;
 
+  void editar();
 };
 
 class Funcionario: public Pessoa
@@ -60,6 +61,8 @@ public:
 
 	void setAdmissao(string);
 	string getAdmissao() const;
+
+  void editar();
 };
 
 
@@ -85,6 +88,8 @@ public:
 
 	void setCrmv(string);
 	string getCrmv() const;
+
+  void editar();
 };
 
 

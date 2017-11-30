@@ -1,6 +1,8 @@
 #include "../include/Pessoa.h"
 #include <iostream>
 #include <algorithm>
+#include <climits>
+
 using namespace std;
 
 
@@ -67,6 +69,31 @@ void Pessoa::setTelefone(string m_telefone){
     telefone = m_telefone;
 }
 
+/// Edita os dados de Pessoa a partir dos valores pedidos no fluxo de entrada
+/// padrão.
+void Pessoa::editar(){
+	string nome, cpf, endereco, telefone;
+
+	std::cin.ignore(INT_MAX, '\n');
+
+	std::cout << "Editar nome (" << this->nome << "): ";
+	getline(cin, nome);
+	if (nome.length() > 0) {
+		setNome(nome);
+	}
+
+	std::cout << "Editar endereço (" << this->endereco << "): ";
+	getline(cin, endereco);
+	if (endereco.length() > 0) {
+		setEndereco(endereco);
+	}
+
+	std::cout << "Editar telefone (" << this->telefone << "): ";
+	getline(cin, telefone);
+	if (telefone.length() > 0) {
+		setTelefone(telefone);
+	}
+}
 
 ///////////////////Construtores e Destrutores ---FUNCIONARIOS////////////////q
 Funcionario::Funcionario():Pessoa(){
@@ -109,7 +136,25 @@ void Funcionario::setAdmissao(string m_admissao){
     admissao = m_admissao;
 }
 
+/// Edita os dados de Funcionario a partir dos valores pedidos no fluxo de entrada
+/// padrão.
+void Funcionario::editar(){
+	Pessoa::editar();
 
+	string funcao, admissao;
+
+	std::cout << "Editar função (" << this->funcao << "): ";
+	getline(cin, funcao);
+	if (funcao.length() > 0) {
+		setFuncao(funcao);
+	}
+
+	std::cout << "Editar admissão (" << this->admissao << "): ";
+	getline(cin, admissao);
+	if (admissao.length() > 0) {
+		setAdmissao(admissao);
+	}
+}
 
 /////////////Construtores e Destrutores -- FUNCIONARIO //////
 
@@ -153,7 +198,25 @@ void Veterinario::setCrmv(string m_crmv){
     crmv = m_crmv;
 }
 
+/// Edita os dados de Veterinario a partir dos valores pedidos no fluxo de entrada
+/// padrão.
+void Veterinario::editar(){
+	Funcionario::editar();
 
+	string especializacao, crmv;
+
+	std::cout << "Editar especialização (" << this->especializacao << "): ";
+	getline(cin, especializacao);
+	if (especializacao.length() > 0) {
+		setFuncao(especializacao);
+	}
+
+	std::cout << "Editar CRMV (" << this->crmv << "): ";
+	getline(cin, crmv);
+	if (crmv.length() > 0) {
+		setAdmissao(crmv);
+	}
+}
 
 //Constructors & Destructors
 Cliente::Cliente(){

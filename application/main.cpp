@@ -49,10 +49,16 @@ int main()
 			pet.write();
 			break;
 		case 4:
+      pet.editar_cliente();
+			pet.write();
 			break;
 		case 5:
+      pet.editar_funcionario();
+			pet.write();
 			break;
 		case 6:
+      pet.editar_veterinario();
+			pet.write();
 			break;
 		case 7:
 			break;

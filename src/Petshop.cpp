@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include "../include/Petshop.h"
+#include<limits.h>
 
 /// Lê os dados do sistema armazenados durante a persistência.
 /// @param arquivo Nome do arquivo contendo os dados dos clientes
@@ -193,4 +194,55 @@ void Petshop::salvar_veterinarios(ostream &out) {
 				<< veterinario.getEspecializacao() << '|' << veterinario.getCrmv()
 				<< std::endl;
 	}
+}
+
+/// Edita os dados de um cliente, caso exista.
+/// @param cpf CPF do cliente a ser editado.
+void Petshop::editar_cliente() {
+	std::string cpf;
+	std::cout << "Informe o CPF do cliente: ";
+	std::cin >> cpf;
+
+	for (auto &cliente : clientes) {
+		if (cliente.getCpf() == cpf) {
+			cliente.editar();
+			return;
+		}
+	}
+
+	std::cout << "Cliente não encontrado!" << std::endl;
+}
+
+/// Edita os dados de um funcionário, caso exista.
+/// @param cpf CPF do funcionário a ser editado.
+void Petshop::editar_funcionario() {
+	std::string cpf;
+	std::cout << "Informe o CPF do funcionário: ";
+	std::cin >> cpf;
+
+	for (auto &funcionario : funcionarios) {
+		if (funcionario.getCpf() == cpf) {
+			funcionario.editar();
+			return;
+		}
+	}
+
+	std::cout << "Cliente não encontrado!" << std::endl;
+}
+
+/// Edita os dados de um veterinário, caso exista.
+/// @param cpf CPF do veterinário a ser editado.
+void Petshop::editar_veterinario() {
+	std::string cpf;
+	std::cout << "Informe o CPF do veterinário: ";
+	std::cin >> cpf;
+
+	for (auto &veterinario : clientes) {
+		if (veterinario.getCpf() == cpf) {
+			veterinario.editar();
+			return;
+		}
+	}
+
+	std::cout << "Cliente não encontrado!" << std::endl;
 }
